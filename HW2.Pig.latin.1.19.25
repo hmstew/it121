@@ -1,0 +1,38 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<title>Pig Latin translator</title> 
+<body>
+
+<h1>HW2 - Pig Latin</h1>
+
+<p>If a word begins with a vowel (apple), append 'way' to the end of the word.</p>
+<p id="demo1"></p>
+
+<script>
+var obj = {name: "apple", new: "appleway"};
+document.getElementById("demo1").innerHTML = obj.new;
+</script>
+
+
+<p>If a word begins with one consonant (pig latin), move that letter to the end and append 'ay'.</p>
+<p id="demo2"></p>
+
+<script>
+var obj = {name: "pig ", new: "igpay atinlay"};
+document.getElementById("demo2").innerHTML = obj.new;
+</script>
+
+
+<p>If a word begins with two consonants (grade), move both letters to the end and append 'ay'.</p>
+<p id="demo3"></p>
+
+<script>
+var obj = {name: "grade", new: "adegray"};
+document.getElementById("demo3").innerHTML = obj.new;
+</script>
+
+</body>
+</html>
+</head>
