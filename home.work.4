@@ -1,0 +1,76 @@
+
+<!DOCTYPE html> 
+<html> 
+<head> 
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script> 
+</head> 
+<body>   
+
+<h1>Functions & validation</h1>   
+
+<form id="form1" action="#" onsubmit="return validateForm(this);"> 
+  first name: <input type="text" name="firstname"><br> 
+  last name: <input type="text" name="lastname"><br> 
+  password: <input type="text" name="password"><br> 
+<button >Check</button> 
+
+</form> 
+ <hr><div id="message"></div>  
+<script> 
+
+   const validateForm = (myForm) => {  
+    // add validate form      
+
+    let firstname = myForm.firstname.value;
+    document.write(firstname);
+   
+    let lastname = myForm.lastname.value; 
+    document.write(lastname);
+     
+    let password = myForm.password.value; 
+    document.write(password);
+    console.log(password); 
+
+    let message = myForm.message.value;
+    document.write(message);
+        
+
+       /* Form validation code goes here 
+    */ 
+    if (username.length < 8) { 
+        errors.push("Username must be at least 8 characters long."); 
+    } 
+    if (!/^[a-zA-Z0-9]+$/.test(firstname)) { 
+        errors.push("Username can only contain alphanumeric characters."); 
+    } 
+    if (!/^[a-zA-Z0-9]+$/.test(lastname)) { 
+        errors.push("Username can only contain alphanumeric characters."); 
+    }     
+    if (password.length < 8) { 
+        errors.push("Password must be at least 8 characters long."); 
+    } 
+    if (!/[A-Z]/.test(password)) { 
+        errors.push("Password must include at least one uppercase letter."); 
+    } 
+    if (!/[a-z]/.test(password)) { 
+        errors.push("Password must include at least one lowercase letter."); 
+    } 
+    if (!/\d/.test(password)) { 
+        errors.push("Password must include at least one digit."); 
+    } 
+    if (!/[@$!%*?&]/.test(password)) { 
+        errors.push("Password must include at least one special character."); 
+    } 
+    if (x =="") { alert ("Name must be filled out"); return false;
+    }
+    }  
+ 
+ // use this syntax to update 'message' DIV with appropriate wording
+    $("#message").html("message");
+
+    return false; // prevent page reload
+  }
+
+</script>
+</body>
+</html> 
