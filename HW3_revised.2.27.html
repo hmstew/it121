@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h2> HW3 - Making the grade </h2>
+<h3> Each student's name is listed alphabetically along with a score</h3>
+<h3> The Average, Max and Min scores are displayed </h3>
+
+<script>
+    const grades = "jim|25, sue|32, mary|34, ann|22, ted|28, frank|15, lisa|19, mike|30, ahn|26, vishaya|27";
+    // Your code here - Split the name from the score
+
+	const students = grades.split(", ") 
+    students.sort() 
+    sum = 0 
+    maxScore = 0
+    minScore = 100           
+	for (let n in students) {
+	  let[name,score]= students[n].split("|"); 
+	  score=parseInt(score);     
+        
+     sum += score;
+     if (score >  maxScore) {
+     maxScore = score;
+     }
+     if (score < minScore) {
+     minScore = score;
+    }     
+  	      
+	document.write(name.charAt(0).toUpperCase()+name.substring(1)  + "-" + score + "<br>"); 
+
+    }
+     document.write("Average score = " + sum/students.length + "<br>");     
+     document.write("Max score = "+ maxScore + "<br>");
+     document.write("Min score = " + minScore + "<br>"); 
+ 
+    
+</script>
+</body>
+</html>
+
